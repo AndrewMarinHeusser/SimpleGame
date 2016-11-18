@@ -1,3 +1,11 @@
+var width = 80
+var height = 80
+var playerX
+var playerY
+var foodX
+var foodY
+
+
 var ravenX = 250;
 document.addEventListener("keydown", function(e) {
  if(e.keyCode == 37){
@@ -23,3 +31,10 @@ document.getElementById("raven").setAttribute("y", ravenY)
 document.getElementById("raven").setAttribute("y", ravenY)
  }
 })
+
+
+
+if (playerX > foodX && playerX < foodX + width && playerY < foodY + height) {
+
+  
+}
