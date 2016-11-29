@@ -46,8 +46,7 @@ playerY = Number(document.getElementById("raven").getAttribute("y"))
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
 console.log("eaten food");
-document.getElementById("food1").setAttribute("opacity", "0.3")
-
+document.getElementById("food1").setAttribute("x",randomNumber(1,400))
 }
 
 food2X = Number(document.getElementById("food2").getAttribute("x"))
@@ -58,8 +57,7 @@ playerY = Number(document.getElementById("raven").getAttribute("y"))
 
 if (playerX > food2X && playerX < food2X + width && playerY > food2Y && playerY < food2Y + height) {
 console.log("eaten food");
-document.getElementById("food2").setAttribute("opacity", "0.3")
-
+document.getElementById("food2").setAttribute("x",randomNumber(1,400))
 }
 
 })
