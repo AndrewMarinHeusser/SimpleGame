@@ -4,6 +4,8 @@ var playerX
 var playerY
 var foodX
 var foodY
+var food2X
+var food2Y
 
 
 var ravenX = 250;
@@ -30,11 +32,30 @@ document.getElementById("raven").setAttribute("y", ravenY)
        ravenY +=15;
 document.getElementById("raven").setAttribute("y", ravenY)
  }
-})
 
 
+foodX = Number(document.getElementById("food1").getAttribute("x"))
+foodY = Number(document.getElementById("food1").getAttribute("y"))
+playerX = Number(document.getElementById("raven").getAttribute("x"))
+playerY = Number(document.getElementById("raven").getAttribute("y"))
 
-if (playerX > foodX && playerX < foodX + width && playerY < foodY + height) {
 
-  
+if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
+console.log("eaten food");
+document.getElementById("food1").setAttribute("opacity", "0.3")
+
 }
+
+food2X = Number(document.getElementById("food2").getAttribute("x"))
+food2Y = Number(document.getElementById("food2").getAttribute("y"))
+playerX = Number(document.getElementById("raven").getAttribute("x"))
+playerY = Number(document.getElementById("raven").getAttribute("y"))
+
+
+if (playerX > food2X && playerX < food2X + width && playerY > food2Y && playerY < food2Y + height) {
+console.log("eaten food");
+document.getElementById("food2").setAttribute("opacity", "0.3")
+
+}
+
+})
