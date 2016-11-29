@@ -7,6 +7,10 @@ var foodY
 var food2X
 var food2Y
 
+function randomNumber(min,max)
+{
+ return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 var ravenX = 250;
 document.addEventListener("keydown", function(e) {
