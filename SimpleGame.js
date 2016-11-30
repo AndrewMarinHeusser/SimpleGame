@@ -1,11 +1,12 @@
-var width = 80
-var height = 80
-var playerX
-var playerY
-var foodX
-var foodY
-var food2X
-var food2Y
+var width = 80;
+var height = 80;
+var playerX;
+var playerY;
+var foodX;
+var foodY;
+var food2X;
+var food2Y;
+var score = 0;
 
 function randomNumber(min,max)
 {
@@ -40,13 +41,16 @@ document.getElementById("raven").setAttribute("y", ravenY)
 
 foodX = Number(document.getElementById("food1").getAttribute("x"))
 foodY = Number(document.getElementById("food1").getAttribute("y"))
-playerX = Number(document.getElementById("raven").getAttribute("x"))
-playerY = Number(document.getElementById("raven").getAttribute("y"))
+playerX = Number(document.getElementById("raven").getAttribute("x" + 60))
+playerY = Number(document.getElementById("raven").getAttribute("y" + 70))
+
 
 
 if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
 console.log("eaten food");
-document.getElementById("food1").setAttribute("x",randomNumber(1,400))
+document.getElementById("food1").setAttribute("x",randomNumber(25,775))
+  score = score + 1;
+  document.getElementById("score").textContent = score
 }
 
 food2X = Number(document.getElementById("food2").getAttribute("x"))
@@ -57,7 +61,9 @@ playerY = Number(document.getElementById("raven").getAttribute("y"))
 
 if (playerX > food2X && playerX < food2X + width && playerY > food2Y && playerY < food2Y + height) {
 console.log("eaten food");
-document.getElementById("food2").setAttribute("x",randomNumber(1,400))
+document.getElementById("food2").setAttribute("x",randomNumber(25,775))
+score = score + 1;
+document.getElementById("score").textContent = score
 }
 
 })
