@@ -45,8 +45,8 @@ document.getElementById("raven").setAttribute("y", ravenY)
 
 foodX = Number(document.getElementById("food1").getAttribute("x"))
 foodY = Number(document.getElementById("food1").getAttribute("y"))
-playerX = Number(document.getElementById("raven").getAttribute("x" + 80))
-playerY = Number(document.getElementById("raven").getAttribute("y" + 90))
+playerX = Number(document.getElementById("raven").getAttribute("x"))
+playerY = Number(document.getElementById("raven").getAttribute("y"))
 
 
 
@@ -60,6 +60,9 @@ document.getElementById("food1").setAttribute("x",randomNumber(25,775))
 
 food2X = Number(document.getElementById("food2").getAttribute("x"))
 food2Y = Number(document.getElementById("food2").getAttribute("y"))
+playerX = Number(document.getElementById("raven").getAttribute("x"))
+playerY = Number(document.getElementById("raven").getAttribute("y"))
+
 
 if (playerX > food2X && playerX < food2X + width && playerY > food2Y && playerY < food2Y + height) {
 console.log("eaten food");
@@ -75,6 +78,8 @@ if (score == 5) {
   document.getElementById("canvas").pauseAnimations()
   var timestop = Date.now()
   var duration = timestop - timestart
-  document.getElementById("time").textContent = duration
+  var finalTime = duration/1000
+  document.getElementById("time").textContent = finalTime +("seconds")
+
 }
 })
