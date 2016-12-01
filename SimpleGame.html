@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- page content -->
-  <svg width="90%" viewBox="0 0 800 400" style="background-color: #98c9e2">
+  <svg id ="canvas" width="90%" viewBox="0 0 800 400" style="background-color: #98c9e2">
     <image id="raven" x="25" y="25" width="100" height="100" xlink:href="http://piskel-imgstore-b.appspot.com/img/de12a414-ab68-11e6-bef8-bd857553a10e.gif"/>
     <image id="food1" x="550" y="350" width="50" height="50" xlink:href="http://piskel-imgstore-b.appspot.com/img/104bac0c-acf7-11e6-a580-3bbe6c6458c4.gif">
       <animate id="foodMove1" attributename="y" from="350" to="1" dur="2s" begin="0.1s; foodMoveBack.end"/>
@@ -19,6 +19,7 @@
     <animate id="foodMoveBack2" attributename="y" from="1" to="350" dur="2s" begin="foodMove2.end"/>
   </image>
   <text id="score" x="700" y="50">0</text>
+    <text id="time" x="700" y="70"></text>
   </svg>
   </body>
   <script src="SimpleGame.js"></script>
